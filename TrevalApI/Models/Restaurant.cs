@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrevalApI.Models
 {
-    [Table("Hotels")]
-    public class Hotel
+    [Table("Restaurant")]
+    public class Restaurant
     {
         [Key]
         [Required]
@@ -30,7 +30,7 @@ namespace TrevalApI.Models
         public string Reserve_url { get; set; }
         public string Mobile_reserve_url { get; set; }
         public string Image_url { get; set; }
-        public List<HotelReview> Reviews { get; set; }
+        public List<RestaurantReview> Reviews { get; set; }
         public DateTime Created_at { get; set; }
         public DateTime Updated_at { get; set; }
     }
