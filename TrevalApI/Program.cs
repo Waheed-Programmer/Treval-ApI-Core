@@ -27,6 +27,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSwaggerUI(options =>
+{
+    var prefix = string.IsNullOrEmpty(options.RoutePrefix) ? "." : "..";
+    options.SwaggerEndpoint($"{prefix}/swagger/v1/swagger.json", "Travel API");
+});
+        
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
